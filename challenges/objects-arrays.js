@@ -75,10 +75,8 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-for (let item of graduates){
-  universities.push(item.university);
-}
-universities.sort((a, b) => a.localeCompare(b));
+graduates.forEach(univName => universities.push(univName.university));
+universities.sort();
 
 console.log(universities);
 
@@ -90,9 +88,7 @@ The resulting contact information strings should have a space between the first 
 Log the result of your new array. */
 const contactInfo = [];
 
-for (let item of graduates){
-  contactInfo.push(`${item.first_name} ${item.email}`);
-}
+graduates.forEach(info => contactInfo.push(`${info.first_name} ${info.email}`));
 
 console.log(contactInfo);
 
